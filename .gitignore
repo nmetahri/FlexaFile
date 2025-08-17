@@ -26,3 +26,7 @@ dist-ssr
 
 Makefile
 .env
+
+# React Router
+/.react-router/
+/build/

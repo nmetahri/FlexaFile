@@ -1,26 +1,29 @@
 /// <reference types="vitest/config" />
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { reactRouter } from "@react-router/dev/vite";
+
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [!process.env.VITEST && reactRouter(), tsconfigPaths()],
   server: {
     host: "0.0.0.0"
   },
   resolve: {
     alias: {
-      "@theme": "/src/theme",
-      "@pages": "/src/theme/pages",
-      "@assets": "/src/theme/assets",
-      "@components": "/src/theme/components",
-      "@hooks": "/src/theme/hooks",
-      "@utils": "/src/theme/utils",
-      "@providers": "/src/theme/providers"
+      "@rr": "/.react-router",
+      "@theme": "/app/theme",
+      "@pages": "/app/theme/pages",
+      "@assets": "/app/theme/assets",
+      "@components": "/app/theme/components",
+      "@hooks": "/app/theme/hooks",
+      "@utils": "/app/theme/utils",
+      "@providers": "/app/theme/providers"
     }
   },
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: ["src/__tests__/setup.ts"]
+    setupFiles: ["app/__tests__/setup.ts"]
   }
 });
