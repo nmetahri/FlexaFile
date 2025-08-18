@@ -11,5 +11,23 @@
     "confirm": "Confirmer",
     "yes": "Oui",
     "no": "Non"
+  },
+  "errors": {
+    "notFound": {
+      "code": "404",
+      "message": "Page non trouvée",
+      "description": "Désolé, la page que vous cherchez n'existe pas ou a été déplacée."
+    },
+    "unauthorized": {
+      "code": "401",
+      "message": "Non autorisé",
+      "description": "Vous n'avez pas les permissions nécessaires pour accéder à cette page."
+    },
+    "serverError": {
+      "code": "5XX",
+      "message": "Erreur serveur",
+      "description": "Quelque chose s'est mal passé sur le serveur. Veuillez réessayer plus tard."
+    },
+    "homeLink": "Retour à l'accueil"
   }
 }

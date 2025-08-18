@@ -4,6 +4,8 @@ import "./app.css";
 import { Route } from "@rr/types/app/+types/root.ts";
 import "@config/i18n.ts";
 import { useTranslation } from "react-i18next";
+import { StatusCodes } from "http-status-codes";
+import { NotFound, ServerError, Unauthorized } from "@theme/pages/Errors";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const links: Route.LinksFunction = () => [
@@ -43,14 +45,53 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let stack: string | undefined;
 
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
+    message = error.status === StatusCodes.NOT_FOUND ? "404" : "Error";
     details =
-      error.status === 404
+      error.status === StatusCodes.NOT_FOUND
         ? "The requested page could not be found."
         : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;
     stack = error.stack;
+  }
+
+  if (isRouteErrorResponse(error)) {
+    if (error.status === StatusCodes.NOT_FOUND) {
+      return (
+        <>
+          <NotFound />
+          {stack && (
+            <pre className="error-stack">
+              <code>{stack}</code>
+            </pre>
+          )}
+        </>
+      );
+    }
+    if (error.status === StatusCodes.UNAUTHORIZED) {
+      return (
+        <>
+          <Unauthorized />
+          {stack && (
+            <pre className="error-stack">
+              <code>{stack}</code>
+            </pre>
+          )}
+        </>
+      );
+    }
+    if (error.status >= StatusCodes.INTERNAL_SERVER_ERROR) {
+      return (
+        <>
+          <ServerError />
+          {stack && (
+            <pre className="error-stack">
+              <code>{stack}</code>
+            </pre>
+          )}
+        </>
+      );
+    }
   }
 
   return (
