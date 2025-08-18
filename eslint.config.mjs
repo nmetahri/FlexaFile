@@ -26,7 +26,6 @@ export default [
     ]
   },
 
-  ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
 
   {

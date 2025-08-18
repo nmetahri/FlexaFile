@@ -12,12 +12,14 @@ export default defineConfig({
   resolve: {
     alias: {
       "@rr": "/.react-router",
+      "@config": "/app/config",
+      "@locales": "/app/locales",
+      "@utils": "/app/utils",
       "@theme": "/app/theme",
       "@pages": "/app/theme/pages",
       "@assets": "/app/theme/assets",
       "@components": "/app/theme/components",
       "@hooks": "/app/theme/hooks",
-      "@utils": "/app/theme/utils",
       "@providers": "/app/theme/providers"
     }
   },

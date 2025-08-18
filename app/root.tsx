@@ -2,6 +2,8 @@ import { isRouteErrorResponse, Links, Meta, Outlet } from "react-router";
 
 import "./app.css";
 import { Route } from "@rr/types/app/+types/root.ts";
+import "@config/i18n.ts";
+import { useTranslation } from "react-i18next";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const links: Route.LinksFunction = () => [
@@ -16,9 +18,12 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
   }
 ];
+
 export default function App() {
+  const { i18n } = useTranslation();
+
   return (
-    <html lang="en">
+    <html lang={i18n.language}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
