@@ -1,5 +1,7 @@
-const Index = () => {
-  return <div>TODO: Replace this with a NotFound Page component</div>;
+import { NotFound } from "@pages/Errors";
+
+const CatchAll = () => {
+  return <NotFound />;
 };
 
-export default Index;
+export default CatchAll;

@@ -11,5 +11,23 @@
     "confirm": "Confirm",
     "yes": "Yes",
     "no": "No"
+  },
+  "errors": {
+    "notFound": {
+      "code": "404",
+      "message": "Page Not Found",
+      "description": "Sorry, the page you are looking for does not exist or has been moved."
+    },
+    "unauthorized": {
+      "code": "401",
+      "message": "Unauthorized",
+      "description": "You do not have the necessary permissions to access this page."
+    },
+    "serverError": {
+      "code": "5XX",
+      "message": "Server Error",
+      "description": "Something went wrong on the server. Please try again later."
+    },
+    "homeLink": "Back to Home"
   }
 }
