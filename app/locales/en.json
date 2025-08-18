@@ -10,7 +10,12 @@
     "view": "View",
     "confirm": "Confirm",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "login": "Login",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "tools": "Tools"
   },
   "errors": {
     "notFound": {
