@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# FlexaFile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The ultimate file management solution. FlexaFile is an open-source tool that lets you effortlessly convert, compress,
+merge, split, and share files with privacy at its core. Designed for simplicity and security, it’s your all-in-one file
+handling companion.
 
-Currently, two official plugins are available:
+## Vision
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+FlexaFile aims to be the go-to platform for all file-related tasks. Our long-term goal is to integrate a wide range of
+tools, including secure file sharing, image editing, document editing, and more, all while prioritizing user privacy and
+ease of use. We’re building a modular, extensible, and community-driven ecosystem for file management.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **File Conversion**: Transform files between formats (e.g., PDF to DOCX, MP4 to AVI).
+- **Compression**: Reduce file sizes without compromising quality.
+- **Merge & Split**: Combine multiple files or split large files into smaller parts.
+- **Secure Sharing**: Share files with end-to-end encryption for maximum privacy.
+- **Future Tools (Planned)**:
+  - Image editing (cropping, resizing, filters).
+  - Document editing (collaborative editing, annotations).
+  - Secret file sharing with expiring links or passwords.
+  - And much more!
 
-- Configure the top-level `parserOptions` property like this:
+## Why FlexaFile?
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Open Source**: Fully transparent, community-driven, and free to use.
+- **Privacy-First**: Your data stays yours with secure, encrypted workflows.
+- **All-in-One**: A growing suite of tools to handle all your file needs.
+- **Simple & Intuitive**: Designed for users of all skill levels.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## License
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+FlexaFile is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute as you see fit.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Contact
+
+Have questions, ideas, or feedback? Reach out to us:
+
+- GitHub Issues: [Create an issue](https://github.com/[your-username]/flexafile/issues)
+
+---
+
+Built with ❤️ by the FlexaFile community.
