@@ -4,6 +4,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import en from "@locales/en.json";
 import fr from "@locales/fr.json";
+import de from "@locales/de.json";
 
 export const fallbackLng = "en";
 export const defaultNS = "translation";
@@ -21,10 +22,20 @@ export const supportedLngsData: Record<string, LanguageData> = {
   en: {
     name: "English",
     image: "https://flagcdn.com/w320/us.png"
+  },
+  de: {
+    name: "Deutsch",
+    image: "https://flagcdn.com/w320/de.png"
   }
 };
 
 export const supportedLngs = Object.keys(supportedLngsData);
+
+export const supportedLngsLabels = {
+  fr: "Français",
+  en: "English",
+  de: "Deutsch"
+};
 
 export const resources = {
   en: {
@@ -32,6 +43,9 @@ export const resources = {
   },
   fr: {
     translation: fr
+  },
+  de: {
+    translation: de
   }
 };
 

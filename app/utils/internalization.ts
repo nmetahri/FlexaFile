@@ -1,6 +1,6 @@
 import { fallbackLng, supportedLngs } from "@config/i18n.ts";
 
-export const getLanguageFromRequest = (request: Request): string => {
+export function getLanguageFromRequest(request: Request): string {
   const url = new URL(request.url);
   const langFromUrl = url.searchParams.get("lang");
   if (langFromUrl && supportedLngs.includes(langFromUrl)) {
@@ -41,4 +41,4 @@ export const getLanguageFromRequest = (request: Request): string => {
   }
 
   return fallbackLng;
-};
+}
