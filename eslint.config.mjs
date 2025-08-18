@@ -17,7 +17,15 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ["**/dist", "**/.eslintrc.cjs", "src/**/*.test.{js,ts,tsx}"]
+    ignores: [
+      "**/dist",
+      "**/.eslintrc.cjs",
+      "app/**/*.test.{js,ts,tsx}",
+      "app/__tests__/**",
+      "app/vite-env.d.ts",
+      "./*.config.*",
+      "./.react-router/types/**"
+    ]
   },
   ...fixupConfigRules(
     compat.extends(
@@ -45,7 +53,7 @@ export default [
       sourceType: "module",
 
       parserOptions: {
-        project: ["./tsconfig.json"],
+        project: ["./tsconfig.app.json", "./tsconfig.node.json"],
         tsconfigRootDir: __dirname
       }
     },
