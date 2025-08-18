@@ -1,19 +1,5 @@
-@use "/app/theme/styles/colors" as *;
-@use "/app/theme/styles/typography" as *;
-
 .navbar {
   display: flex;
   align-items: center;
   gap: 1rem;
-
-  .navbar-link {
-    font-size: $font-size-base;
-    text-decoration: none;
-    color: $dark-text;
-
-    &.active {
-      font-weight: bold;
-      text-decoration: underline;
-    }
-  }
 }

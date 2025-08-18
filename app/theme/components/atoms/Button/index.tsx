@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, FC } from "react";
+import clsx from "clsx";
 
 import "./index.scss";
 
@@ -9,15 +10,19 @@ type ButtonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button: FC<ButtonProps> = ({
+  children,
   className,
   variant = "primary",
   ...rest
 }) => {
   return (
     <button
-      className={`button button__${variant ?? "primary"} ${className ?? ""}`}
+      type="button"
+      className={clsx("button", `button__${variant}`, className)}
       {...rest}
-    />
+    >
+      {children}
+    </button>
   );
 };
 

@@ -4,8 +4,8 @@ import Header from "@components/organisms/Header";
 const GenericLayout = () => {
   return (
     <>
+      <Header />
       <main>
-        <Header />
         <Outlet />
       </main>
       <ScrollRestoration />
