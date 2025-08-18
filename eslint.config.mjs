@@ -1,19 +1,16 @@
-import { fixupConfigRules } from "@eslint/compat";
+import reactPlugin from "eslint-plugin-react";
 import reactRefresh from "eslint-plugin-react-refresh";
-import globals from "globals";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import * as tseslint from "typescript-eslint";
+import prettierPlugin from "eslint-plugin-prettier";
+import prettierConfig from "eslint-config-prettier";
+import globals from "globals";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all
-});
 
 export default [
   {
@@ -24,53 +21,51 @@ export default [
       "app/__tests__/**",
       "app/vite-env.d.ts",
       "./*.config.*",
-      "./.react-router/types/**"
+      "./.react-router/types/**",
+      "**/node_modules/**"
     ]
   },
-  ...fixupConfigRules(
-    compat.extends(
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:react/jsx-runtime",
-      "plugin:@typescript-eslint/strict-type-checked",
-      "plugin:@typescript-eslint/stylistic-type-checked",
-      "plugin:react-hooks/recommended",
-      "prettier"
-    )
-  ),
+
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
+
   {
     plugins: {
-      "react-refresh": reactRefresh
+      "@typescript-eslint": tsPlugin,
+      react: reactPlugin,
+      "react-refresh": reactRefresh,
+      prettier: prettierPlugin
     },
 
     languageOptions: {
-      globals: {
-        ...globals.browser
-      },
-
       parser: tsParser,
-      ecmaVersion: "latest",
-      sourceType: "module",
-
       parserOptions: {
         project: ["./tsconfig.app.json", "./tsconfig.node.json"],
         tsconfigRootDir: __dirname
-      }
+      },
+      globals: {
+        ...globals.browser
+      },
+      ecmaVersion: "latest",
+      sourceType: "module"
     },
 
     settings: {
-      react: {
-        version: "detect"
-      }
+      react: { version: "detect" }
     },
 
     rules: {
+      ...reactPlugin.configs.recommended.rules,
+      ...reactPlugin.configs["jsx-runtime"].rules,
+
       "react-refresh/only-export-components": [
         "warn",
-        {
-          allowConstantExport: true
-        }
-      ]
+        { allowConstantExport: true }
+      ],
+
+      "prettier/prettier": "error"
     }
-  }
+  },
+
+  prettierConfig
 ];
