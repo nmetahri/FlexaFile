@@ -31,7 +31,7 @@ ease of use. We’re building a modular, extensible, and community-driven ecosys
 
 ## License
 
-FlexaFile is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute as you see fit.
+FlexaFile is licensed under the [GNU General Public License v3.0](LICENSE). You are free to use, modify, and distribute this project, provided you comply with the terms of the GPL v3.0.
 
 ## Contact
 
