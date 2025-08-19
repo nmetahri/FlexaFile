@@ -1,6 +1,6 @@
 import Button from "@components/atoms/Button";
-import { useLocation, useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router";
 
 const LoginBtn = () => {
   const navigate = useNavigate();

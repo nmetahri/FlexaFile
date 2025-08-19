@@ -1,11 +1,10 @@
+import i18n, { defaultNS } from "@config/i18n";
+import i18next from "i18next";
+import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 import { I18nextProvider, initReactI18next } from "react-i18next";
 import { HydratedRouter } from "react-router/dom";
-import i18next from "i18next";
-import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
-
-import i18n, { defaultNS } from "@config/i18n";
 
 startTransition(async () => {
   await i18next

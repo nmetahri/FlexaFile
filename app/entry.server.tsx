@@ -1,15 +1,15 @@
+import { PassThrough } from "node:stream";
+
+import { createI18nInstance } from "@config/i18n.server";
+import { createReadableStreamFromReadable } from "@react-router/node";
+import { getLanguageFromRequest } from "@utils/internalization.ts";
+import { StatusCodes } from "http-status-codes";
+import { isbot } from "isbot";
 import type { RenderToPipeableStreamOptions } from "react-dom/server";
 import { renderToPipeableStream } from "react-dom/server";
 import { I18nextProvider } from "react-i18next";
 import type { EntryContext } from "react-router";
 import { ServerRouter } from "react-router";
-import { createReadableStreamFromReadable } from "@react-router/node";
-import { StatusCodes } from "http-status-codes";
-import { isbot } from "isbot";
-import { PassThrough } from "node:stream";
-
-import { createI18nInstance } from "@config/i18n.server";
-import { getLanguageFromRequest } from "@utils/internalization.ts";
 
 export const streamTimeout = 5_000;
 

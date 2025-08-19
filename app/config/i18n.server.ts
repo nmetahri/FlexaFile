@@ -1,5 +1,5 @@
-import { initReactI18next } from "react-i18next";
 import { createInstance, type InitOptions } from "i18next";
+import { initReactI18next } from "react-i18next";
 
 import { defaultNS, fallbackLng, resources, supportedLngs } from "./i18n";
 

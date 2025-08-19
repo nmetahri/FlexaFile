@@ -1,0 +1,14 @@
+@use "/app/theme/styles/colors" as *;
+
+.icon-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+
+  &:hover {
+    background: lighten($primary-light-bg, 10%);
+  }
+}

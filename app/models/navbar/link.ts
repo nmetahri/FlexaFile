@@ -1,5 +1,5 @@
-import { TFunction } from "i18next";
 import { INavLink } from "@models/navbar/link.dto.ts";
+import { TFunction } from "i18next";
 
 export const makeNavLink = (to: string, label: string): INavLink => {
   return { to, label };

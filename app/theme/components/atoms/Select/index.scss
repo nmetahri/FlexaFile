@@ -1,0 +1,19 @@
+@use "/app/theme/styles/colors" as *;
+
+.select {
+  appearance: none;
+  width: 100%;
+  background-color: $primary-light-bg;
+  color: $dark-text;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid $primary-color;
+    box-shadow: 0 0 0 2px darken($primary-color, 10%);
+  }
+}

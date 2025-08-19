@@ -1,29 +1,30 @@
+@use "/app/theme/styles/colors" as *;
+
 .error-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f4f4f4;
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
 .error-code {
   font-size: 6rem;
-  color: #d32f2f;
+  color: $danger-color;
   margin: 0;
 }
 
 .error-message {
   font-size: 2rem;
-  color: #333;
+  color: $dark-text;
   margin: 10px 0;
 }
 
 .error-description {
   font-size: 1.2rem;
-  color: #666;
+  color: lighten($dark-text, 20%);
   max-width: 600px;
   margin: 10px 0;
 }
@@ -32,8 +33,8 @@
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #1976d2;
-  color: white;
+  background-color: $primary-color;
+  color: $light-text;
   text-decoration: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -41,5 +42,5 @@
 }
 
 .error-link:hover {
-  background-color: #1565c0;
+  background-color: darken($primary-color, 10%);
 }

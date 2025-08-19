@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { INavLink } from "@models/navbar/link.dto.ts";
-import { NavLink } from "react-router";
-
 import "./index.scss";
+
+import { INavLink } from "@models/navbar/link.dto.ts";
+import { FC } from "react";
+import { NavLink } from "react-router";
 
 interface MyNavLinkProps {
   link: INavLink;

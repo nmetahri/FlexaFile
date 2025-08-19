@@ -1,10 +1,10 @@
-import { initReactI18next } from "react-i18next";
-import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
-
+import de from "@locales/de.json";
 import en from "@locales/en.json";
 import fr from "@locales/fr.json";
-import de from "@locales/de.json";
+import { getCountryFlag } from "@utils/internalization.ts";
+import i18n from "i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import { initReactI18next } from "react-i18next";
 
 export const fallbackLng = "en";
 export const defaultNS = "translation";
@@ -14,28 +14,28 @@ interface LanguageData {
   image: string;
 }
 
-export const supportedLngsData: Record<string, LanguageData> = {
-  fr: {
-    name: "Français",
-    image: "https://flagcdn.com/w320/fr.png"
-  },
-  en: {
-    name: "English",
-    image: "https://flagcdn.com/w320/us.png"
-  },
-  de: {
-    name: "Deutsch",
-    image: "https://flagcdn.com/w320/de.png"
-  }
-};
-
-export const supportedLngs = Object.keys(supportedLngsData);
-
 export const supportedLngsLabels = {
   fr: "Français",
   en: "English",
   de: "Deutsch"
 };
+
+export const supportedLngsData: Record<string, LanguageData> = {
+  fr: {
+    name: supportedLngsLabels.fr,
+    image: getCountryFlag("fr")
+  },
+  en: {
+    name: supportedLngsLabels.en,
+    image: getCountryFlag("us")
+  },
+  de: {
+    name: supportedLngsLabels.de,
+    image: getCountryFlag("de")
+  }
+};
+
+export const supportedLngs = Object.keys(supportedLngsData);
 
 export const resources = {
   en: {

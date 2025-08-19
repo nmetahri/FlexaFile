@@ -1,10 +1,9 @@
-import { useTranslation } from "react-i18next";
-import MyNavLink from "@components/atoms/NavLink";
-import LoginBtn from "@components/atoms/Button/Login";
-import { makeNavLinks } from "@models/navbar/link.ts";
-
 import "./index.scss";
-import { Settings } from "lucide-react";
+
+import LoginBtn from "@components/atoms/Button/Login";
+import MyNavLink from "@components/atoms/NavLink";
+import { makeNavLinks } from "@models/navbar/link.ts";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -16,9 +15,6 @@ const Navbar = () => {
         <MyNavLink key={link.to} link={link} />
       ))}
       <LoginBtn />
-
-      {/* TODO : create dropdown settings with locale switcher */}
-      <Settings />
     </div>
   );
 };
