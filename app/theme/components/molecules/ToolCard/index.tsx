@@ -7,7 +7,7 @@ import TitleWithIcon, {
 import { FC } from "react";
 import { useNavigate } from "react-router";
 
-interface ToolCardProps extends TitleWithIconProps {
+export interface ToolCardProps extends TitleWithIconProps {
   description: string;
   link: string;
 }
