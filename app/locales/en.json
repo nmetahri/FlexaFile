@@ -56,6 +56,11 @@
       "message": "Server Error",
       "description": "Something went wrong on the server. Please try again later."
     },
+    "workInProgress": {
+      "code": "WIP",
+      "message": "Work in Progress",
+      "description": "This feature is currently under development. Please check back later."
+    },
     "homeLink": "Back to Home"
   }
 }

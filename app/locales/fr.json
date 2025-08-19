@@ -56,6 +56,11 @@
       "message": "Erreur serveur",
       "description": "Quelque chose s'est mal passé sur le serveur. Veuillez réessayer plus tard."
     },
+    "workInProgress": {
+      "code": "WIP",
+      "message": "En cours de développement",
+      "description": "Cette fonctionnalité est actuellement en cours de développement. Veuillez revenir plus tard."
+    },
     "homeLink": "Retour à l'accueil"
   }
 }
