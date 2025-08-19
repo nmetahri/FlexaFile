@@ -1,4 +1,5 @@
 @use "/app/theme/styles/colors" as *;
+@use "sass:color" as color;
 
 .icon-button {
   border: none;
@@ -9,6 +10,6 @@
   transition: background 0.2s;
 
   &:hover {
-    background: lighten($primary-light-bg, 10%);
+    background: color.adjust($primary-light-bg, $lightness: 10%);
   }
 }

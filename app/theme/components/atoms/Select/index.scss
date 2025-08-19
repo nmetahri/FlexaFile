@@ -1,4 +1,5 @@
 @use "/app/theme/styles/colors" as *;
+@use "sass:color" as color;
 
 .select {
   appearance: none;
@@ -14,6 +15,6 @@
   &:focus {
     outline: none;
     border: 1px solid $primary-color;
-    box-shadow: 0 0 0 2px darken($primary-color, 10%);
+    box-shadow: 0 0 0 2px color.adjust($primary-color, $lightness: -10%);
   }
 }

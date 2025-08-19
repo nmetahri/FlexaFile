@@ -1,5 +1,6 @@
 @use "/app/theme/styles/colors" as *;
 @use "/app/theme/styles/typography" as *;
+@use "sass:color" as color;
 
 .dropdown-menu {
   position: absolute;
@@ -28,7 +29,7 @@
     transition: background 0.2s;
 
     &:hover {
-      background: lighten($secondary-light-bg, 5%);
+      background: color.adjust($secondary-light-bg, $lightness: 5%);
     }
   }
 }
