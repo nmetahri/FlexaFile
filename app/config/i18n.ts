@@ -23,15 +23,15 @@ export const supportedLngsLabels = {
 export const supportedLngsData: Record<string, LanguageData> = {
   fr: {
     name: supportedLngsLabels.fr,
-    image: getCountryFlag("fr")
+    image: getCountryFlag?.("fr")
   },
   en: {
     name: supportedLngsLabels.en,
-    image: getCountryFlag("us")
+    image: getCountryFlag?.("us")
   },
   de: {
     name: supportedLngsLabels.de,
-    image: getCountryFlag("de")
+    image: getCountryFlag?.("de")
   }
 };
 
