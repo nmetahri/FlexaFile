@@ -1,6 +1,11 @@
 import { ITool } from "@models/tool/tool.dto.ts";
 import { TFunction } from "i18next";
-import { FileEditIcon, FileTextIcon, ImageIcon, LockIcon } from "lucide-react";
+import {
+  FileEditIcon,
+  FileTextIcon,
+  ImageIcon,
+  LockKeyhole
+} from "lucide-react";
 import { ReactElement } from "react";
 
 type ToolKey = "documents" | "images" | "notepad" | "share";
@@ -9,7 +14,7 @@ const IconsMap: Record<ToolKey, ReactElement> = {
   documents: <FileTextIcon />,
   images: <ImageIcon />,
   notepad: <FileEditIcon />,
-  share: <LockIcon />
+  share: <LockKeyhole />
 };
 
 const makeTool = (
