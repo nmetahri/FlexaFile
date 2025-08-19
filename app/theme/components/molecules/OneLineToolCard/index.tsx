@@ -1,13 +1,28 @@
-import ToolCard, { ToolCardProps } from "@components/molecules/ToolCard";
-import { FC } from "react";
+import "./index.scss";
 
-const OneLineToolCard: FC<ToolCardProps> = ({ ...rest }) => {
+import ToolCard, { ToolCardProps } from "@components/molecules/ToolCard";
+import { FC, ReactNode } from "react";
+
+interface OneLineToolCardProps extends ToolCardProps {
+  rightChildren?: ReactNode;
+}
+
+const OneLineToolCard: FC<OneLineToolCardProps> = ({
+  rightChildren,
+  ...rest
+}) => {
   return (
-    <ToolCard
-      description={rest.description}
-      link={rest.link}
-      title={rest.title}
-    />
+    <div className="one-line-tool-card">
+      <ToolCard
+        description={rest.description}
+        link={rest.link}
+        title={rest.title}
+        icon={undefined}
+      />
+      {rightChildren && (
+        <div className="one-line-tool-card__icon">{rightChildren}</div>
+      )}
+    </div>
   );
 };
 

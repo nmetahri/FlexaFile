@@ -10,7 +10,7 @@ export interface TitleWithIconProps {
 const TitleWithIcon: FC<TitleWithIconProps> = ({ title, icon }) => {
   return (
     <div className="title-with-icon">
-      {icon && <span className="icon">{icon}</span>}
+      {icon !== undefined && <span className="icon">{icon}</span>}
       <h2 className="title">{title}</h2>
     </div>
   );

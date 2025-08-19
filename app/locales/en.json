@@ -15,9 +15,14 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact",
-    "tools": "Tools"
+    "tools": "Tools",
+    "goto": "Go to"
   },
   "tools": {
+    "all": {
+      "title": "All your tools in one place",
+      "description": "Edit, convert, share, and manage your files online simply and securely."
+    },
     "documents": {
       "title": "Documents",
       "description": "Convert, merge, edit your PDFs and office files."

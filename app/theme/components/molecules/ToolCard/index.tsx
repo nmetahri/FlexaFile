@@ -5,6 +5,7 @@ import TitleWithIcon, {
   TitleWithIconProps
 } from "@components/atoms/TitleWithIcon";
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 
 export interface ToolCardProps extends TitleWithIconProps {
@@ -14,6 +15,7 @@ export interface ToolCardProps extends TitleWithIconProps {
 
 const ToolCard: FC<ToolCardProps> = ({ title, icon, description, link }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleClick = () => {
     navigate(link);
@@ -24,7 +26,7 @@ const ToolCard: FC<ToolCardProps> = ({ title, icon, description, link }) => {
       <TitleWithIcon icon={icon} title={title} />
       <span>{description}</span>
       <div>
-        <Button onClick={handleClick}>Accéder</Button>
+        <Button onClick={handleClick}>{t("common.goto")}</Button>
       </div>
     </div>
   );

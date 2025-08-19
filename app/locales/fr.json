@@ -15,9 +15,14 @@
     "home": "Accueil",
     "about": "À propos",
     "contact": "Contact",
-    "tools": "Outils"
+    "tools": "Outils",
+    "goto": "Accéder"
   },
   "tools": {
+    "all": {
+      "title": "Tous vos outils au même endroit",
+      "description": "Éditez, convertissez, partagez et gérez vos fichiers en ligne de manière simple et sécurisée."
+    },
     "documents": {
       "title": "Documents",
       "description": "Convertir, fusionner, éditer vos PDF et fichiers bureautiques."

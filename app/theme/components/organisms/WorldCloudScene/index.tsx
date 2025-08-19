@@ -1,7 +1,7 @@
 import WordCloudDistribution from "@components/molecules/WorldCloudDistribution";
 import { TrackballControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { memo, Suspense } from "react";
 
 interface WordCloudSceneProps {
   wordList?: string[];
@@ -16,9 +16,8 @@ const WordCloudScene = ({
 }: WordCloudSceneProps) => {
   return (
     <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
-      <fog attach="fog" args={["#202025", 0, 80]} />
       <Suspense fallback={null}>
-        <group rotation={[10, 10.5, 10]}>
+        <group>
           <WordCloudDistribution
             wordList={wordList}
             gridSize={gridSize}
@@ -31,4 +30,4 @@ const WordCloudScene = ({
   );
 };
 
-export default WordCloudScene;
+export default memo(WordCloudScene);

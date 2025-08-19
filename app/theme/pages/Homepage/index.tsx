@@ -12,11 +12,16 @@ const Homepage = () => {
   return (
     <div>
       <OneLineToolCard
-        description={"Ceci est un test."}
+        description={t("tools.all.description")}
+        title={t("tools.all.title")}
         link={"/tools"}
-        title={"Tous vos outils au même endroit"}
+        rightChildren={
+          <WorldCloudScene
+            wordList={tools.map((t) => t.title)}
+            gridSize={tools.length}
+          />
+        }
       />
-      <WorldCloudScene wordList={["test", "test2", "test3"]} />
       <ToolsGrid title={t("common.tools")} tools={tools} />
     </div>
   );

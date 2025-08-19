@@ -24,6 +24,10 @@ const makeTool = (
   link: string
 ): ITool => ({ title, description, icon, link });
 
+export const makeToolLink = (key: string): string => {
+  return `/tools/${key.toLowerCase()}`;
+};
+
 export const makeTools = (t: TFunction): ITool[] => {
   const toolKeys: ToolKey[] = ["documents", "images", "notepad", "share"];
 
@@ -32,7 +36,7 @@ export const makeTools = (t: TFunction): ITool[] => {
       t(`tools.${key}.title`),
       t(`tools.${key}.description`),
       IconsMap[key],
-      `/tools/${key}`
+      makeToolLink(key)
     )
   );
 };

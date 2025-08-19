@@ -1,5 +1,6 @@
 import "./index.scss";
 
+import SectionTitle from "@components/atoms/SectionTitle";
 import ToolCard from "@components/molecules/ToolCard";
 import { ITool } from "@models/tool/tool.dto.ts";
 import { FC } from "react";
@@ -12,7 +13,7 @@ interface ToolsGridProps {
 const ToolsGrid: FC<ToolsGridProps> = ({ title, tools }) => {
   return (
     <div className="tools-wrapper">
-      <h2 className="tools-title">{title}</h2>
+      <SectionTitle title={title} />
       <div className="tools-grid">
         {tools?.map((tool, index) => (
           <ToolCard
