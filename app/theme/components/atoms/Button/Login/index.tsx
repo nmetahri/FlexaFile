@@ -1,16 +1,20 @@
 import Button from "@components/atoms/Button";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
 
 const LoginBtn = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { t } = useTranslation();
+
+  const isActive = location.pathname === "/login";
 
   return (
     <Button
+      className={isActive ? "button__primary--active" : ""}
       onClick={(event) => {
         event.preventDefault();
-        if (location.pathname !== "/login") {
+        if (!isActive) {
           navigate("/login", { replace: true });
         }
       }}
