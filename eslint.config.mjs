@@ -3,8 +3,10 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import * as tseslint from "typescript-eslint";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 import prettierPlugin from "eslint-plugin-prettier";
 import prettierConfig from "eslint-config-prettier";
+import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
 import globals from "globals";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -31,6 +33,8 @@ export default [
   {
     plugins: {
       "@typescript-eslint": tsPlugin,
+      "no-relative-import-paths": noRelativeImportPaths,
+      "simple-import-sort": simpleImportSort,
       react: reactPlugin,
       "react-refresh": reactRefresh,
       prettier: prettierPlugin
@@ -62,7 +66,15 @@ export default [
         { allowConstantExport: true }
       ],
 
-      "prettier/prettier": "error"
+      "prettier/prettier": "error",
+
+      "no-relative-import-paths/no-relative-import-paths": [
+        "error",
+        { allowSameFolder: true }
+      ],
+
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error"
     }
   },
 

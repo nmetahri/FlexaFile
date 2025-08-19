@@ -1,0 +1,15 @@
+@use "/app/theme/styles/colors" as *;
+@use "sass:color" as color;
+
+.icon-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+
+  &:hover {
+    background: color.adjust($primary-light-bg, $lightness: 10%);
+  }
+}

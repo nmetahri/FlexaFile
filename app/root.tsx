@@ -1,11 +1,12 @@
-import { isRouteErrorResponse, Links, Meta, Outlet } from "react-router";
-
-import "./app.css";
-import { Route } from "@rr/types/app/+types/root.ts";
+import "./app.scss";
 import "@config/i18n.ts";
-import { useTranslation } from "react-i18next";
-import { StatusCodes } from "http-status-codes";
+
+import Settings from "@config/settings.ts";
+import { Route } from "@rr/types/app/+types/root.ts";
 import { NotFound, ServerError, Unauthorized } from "@theme/pages/Errors";
+import { StatusCodes } from "http-status-codes";
+import { useTranslation } from "react-i18next";
+import { isRouteErrorResponse, Links, Meta, Outlet } from "react-router";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const links: Route.LinksFunction = () => [
@@ -27,6 +28,7 @@ export default function App() {
   return (
     <html lang={i18n.language}>
       <head>
+        <title>{Settings.name}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />

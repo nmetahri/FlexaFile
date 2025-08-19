@@ -1,0 +1,16 @@
+@use "/app/theme/styles/colors" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary-light-bg;
+
+  padding: 1rem 5rem;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}

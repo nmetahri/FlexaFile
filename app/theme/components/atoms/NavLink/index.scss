@@ -1,0 +1,34 @@
+@use "/app/theme/styles/colors" as *;
+@use "/app/theme/styles/typography" as *;
+
+.navbar-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: $dark-text;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: $dark-text-active;
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: $dark-text-active;
+  }
+
+  &.active {
+    color: $dark-text-active;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}

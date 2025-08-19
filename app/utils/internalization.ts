@@ -42,3 +42,8 @@ export function getLanguageFromRequest(request: Request): string {
 
   return fallbackLng;
 }
+
+export function getCountryFlag(code: string, width = "320"): string {
+  const countryCode = code.toLowerCase();
+  return `https://flagcdn.com/w${width}/${countryCode}.png`;
+}

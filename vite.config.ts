@@ -15,6 +15,7 @@ export default defineConfig({
       "@config": "/app/config",
       "@locales": "/app/locales",
       "@utils": "/app/utils",
+      "@models": "/app/models",
       "@theme": "/app/theme",
       "@pages": "/app/theme/pages",
       "@assets": "/app/theme/assets",
