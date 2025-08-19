@@ -15,7 +15,30 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact",
-    "tools": "Tools"
+    "tools": "Tools",
+    "goto": "Go to"
+  },
+  "tools": {
+    "all": {
+      "title": "All your tools in one place",
+      "description": "Edit, convert, share, and manage your files online simply and securely."
+    },
+    "documents": {
+      "title": "Documents",
+      "description": "Convert, merge, edit your PDFs and office files."
+    },
+    "images": {
+      "title": "Images",
+      "description": "Resize, compress, convert and edit your images."
+    },
+    "notepad": {
+      "title": "Notepad",
+      "description": "Edit text online, collaboratively and securely."
+    },
+    "share": {
+      "title": "Share",
+      "description": "Secure file sharing with encryption and expiration."
+    }
   },
   "errors": {
     "notFound": {
@@ -32,6 +55,11 @@
       "code": "5XX",
       "message": "Server Error",
       "description": "Something went wrong on the server. Please try again later."
+    },
+    "workInProgress": {
+      "code": "WIP",
+      "message": "Work in Progress",
+      "description": "This feature is currently under development. Please check back later."
     },
     "homeLink": "Back to Home"
   }

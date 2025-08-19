@@ -4,7 +4,7 @@ import type React from "react";
 import { useTranslation } from "react-i18next";
 
 interface ErrorPageProps {
-  errorType: "notFound" | "unauthorized" | "serverError";
+  errorType: "notFound" | "unauthorized" | "serverError" | "workInProgress";
 }
 
 const ErrorPage: React.FC<ErrorPageProps> = ({ errorType }) => {
@@ -30,4 +30,7 @@ export const Unauthorized: React.FC = () => (
 );
 export const ServerError: React.FC = () => (
   <ErrorPage errorType="serverError" />
+);
+export const WorkInProgress: React.FC = () => (
+  <ErrorPage errorType="workInProgress" />
 );

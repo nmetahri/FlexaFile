@@ -15,7 +15,30 @@
     "home": "Accueil",
     "about": "À propos",
     "contact": "Contact",
-    "tools": "Outils"
+    "tools": "Outils",
+    "goto": "Accéder"
+  },
+  "tools": {
+    "all": {
+      "title": "Tous vos outils au même endroit",
+      "description": "Éditez, convertissez, partagez et gérez vos fichiers en ligne de manière simple et sécurisée."
+    },
+    "documents": {
+      "title": "Documents",
+      "description": "Convertir, fusionner, éditer vos PDF et fichiers bureautiques."
+    },
+    "images": {
+      "title": "Images",
+      "description": "Redimensionner, compresser, convertir et éditer vos images."
+    },
+    "notepad": {
+      "title": "Notepad",
+      "description": "Éditer de texte en ligne, collaboratif et sécurisé."
+    },
+    "share": {
+      "title": "Share",
+      "description": "Partage sécurisé de fichiers avec chiffrement et expiration."
+    }
   },
   "errors": {
     "notFound": {
@@ -32,6 +55,11 @@
       "code": "5XX",
       "message": "Erreur serveur",
       "description": "Quelque chose s'est mal passé sur le serveur. Veuillez réessayer plus tard."
+    },
+    "workInProgress": {
+      "code": "WIP",
+      "message": "En cours de développement",
+      "description": "Cette fonctionnalité est actuellement en cours de développement. Veuillez revenir plus tard."
     },
     "homeLink": "Retour à l'accueil"
   }

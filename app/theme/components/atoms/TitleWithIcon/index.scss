@@ -1,0 +1,25 @@
+@use "/app/theme/styles/colors" as *;
+
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+
+  .icon {
+    > svg {
+      color: $dark-text;
+      width: 5rem;
+      height: 5rem;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $dark-text;
+  }
+}
