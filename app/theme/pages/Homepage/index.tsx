@@ -1,18 +1,15 @@
-import ToolCard from "@components/molecules/ToolCard";
-import { Image } from "lucide-react";
+import ToolsGrid from "@components/organisms/ToolsGrid";
+import { makeTools } from "@models/tool/tools.tsx";
 import { useTranslation } from "react-i18next";
 
 const Homepage = () => {
   const { t } = useTranslation();
 
+  const tools = makeTools(t);
+
   return (
     <div>
-      <ToolCard
-        description={"Ceci est une description de zinzin."}
-        link={"/test"}
-        icon={<Image />}
-        title={"Titre"}
-      />
+      <ToolsGrid title={t("common.tools")} tools={tools} />
     </div>
   );
 };

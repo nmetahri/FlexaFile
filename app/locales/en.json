@@ -17,6 +17,24 @@
     "contact": "Contact",
     "tools": "Tools"
   },
+  "tools": {
+    "documents": {
+      "title": "Documents",
+      "description": "Convert, merge, edit your PDFs and office files."
+    },
+    "images": {
+      "title": "Images",
+      "description": "Resize, compress, convert and edit your images."
+    },
+    "notepad": {
+      "title": "Notepad",
+      "description": "Edit text online, collaboratively and securely."
+    },
+    "share": {
+      "title": "Share",
+      "description": "Secure file sharing with encryption and expiration."
+    }
+  },
   "errors": {
     "notFound": {
       "code": "404",

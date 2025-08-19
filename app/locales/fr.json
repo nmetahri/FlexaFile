@@ -17,6 +17,24 @@
     "contact": "Contact",
     "tools": "Outils"
   },
+  "tools": {
+    "documents": {
+      "title": "Documents",
+      "description": "Convertir, fusionner, éditer vos PDF et fichiers bureautiques."
+    },
+    "images": {
+      "title": "Images",
+      "description": "Redimensionner, compresser, convertir et éditer vos images."
+    },
+    "notepad": {
+      "title": "Notepad",
+      "description": "Éditer de texte en ligne, collaboratif et sécurisé."
+    },
+    "share": {
+      "title": "Share",
+      "description": "Partage sécurisé de fichiers avec chiffrement et expiration."
+    }
+  },
   "errors": {
     "notFound": {
       "code": "404",

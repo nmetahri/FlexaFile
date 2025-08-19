@@ -4,9 +4,10 @@
 .tool-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 1rem;
   gap: 1rem;
 
   border-radius: 10px;
-  background-color: color.adjust($primary-light-bg, $lightness: -5%);
+  background-color: color.adjust($primary-light-bg, $lightness: -3%);
 }
