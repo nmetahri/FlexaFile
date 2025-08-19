@@ -37,7 +37,7 @@ FlexaFile is licensed under the [GNU General Public License v3.0](LICENSE). You 
 
 Have questions, ideas, or feedback? Reach out to us:
 
-- GitHub Issues: [Create an issue](https://github.com/[your-username]/flexafile/issues)
+- GitHub Issues: [Create an issue](https://github.com/nmetahri/FlexaFile/issues)
 
 ---
 
