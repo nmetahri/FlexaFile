@@ -1,0 +1,62 @@
+.fileinput-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileinput-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 16rem;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: 2px dashed #d1d5db;
+  background: #f9fafb;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+
+  &:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+  }
+}
+
+.fileinput-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+.fileinput-icon {
+  margin-bottom: 1rem;
+  height: 2rem;
+  width: 2rem;
+  color: #6b7280;
+}
+
+.fileinput-title {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.fileinput-bold {
+  font-weight: 600;
+}
+
+.fileinput-desc {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.fileinput-input {
+  display: none;
+}

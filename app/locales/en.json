@@ -25,7 +25,11 @@
     },
     "documents": {
       "title": "Documents",
-      "description": "Convert, merge, edit your PDFs and office files."
+      "description": "Convert, merge, edit your PDFs and office files.",
+      "page": {
+        "title": "File Converter",
+        "subtitle": "Convert your files securely to the format of your choice!"
+      }
     },
     "images": {
       "title": "Images",

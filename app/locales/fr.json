@@ -16,7 +16,14 @@
     "about": "À propos",
     "contact": "Contact",
     "tools": "Outils",
-    "goto": "Accéder"
+    "goto": "Accéder",
+    "drag-drop": "Glisser-déposer",
+    "click": "cliquer"
+  },
+  "form": {
+    "file-input": {
+      "label": "{{ w1 }} ou {{ w2 }} pour sélectionner un fichier."
+    }
   },
   "tools": {
     "all": {
@@ -25,7 +32,11 @@
     },
     "documents": {
       "title": "Documents",
-      "description": "Convertir, fusionner, éditer vos PDF et fichiers bureautiques."
+      "description": "Convertir, fusionner, éditer vos PDF et fichiers bureautiques.",
+      "page": {
+        "title": "Convertisseur de fichier(s)",
+        "subtitle": "Convertissez vos fichiers en toute sécurté dans le format de votre choix !"
+      }
     },
     "images": {
       "title": "Images",
